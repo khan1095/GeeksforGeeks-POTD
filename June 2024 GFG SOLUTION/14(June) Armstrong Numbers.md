@@ -19,7 +19,7 @@ Output:
 Yes
 ```
 Explanation:
-153 is an Armstrong number since \(1^3 + 5^3 + 3^3 = 153\). Hence, the answer is "Yes".
+153 is an Armstrong number since \(1^3 + 5^3 + 3^3 = 153\). Hence, the answer is "true".
 
 ### My Approach
 
@@ -31,8 +31,8 @@ Explanation:
 
 3. **Comparison:**
    - Compare the calculated sum with the original number.
-   - If they are equal, return "Yes".
-   - Otherwise, return "No".
+   - If they are equal, return "true".
+   - Otherwise, return "false".
 
 ### Time and Auxiliary Space Complexity
 
@@ -49,9 +49,9 @@ public:
     string armstrongNumber(int n) {
         string ans = to_string(n);
         if ((pow((ans[0]-'0'), 3) + pow((ans[1]-'0'), 3) + pow((ans[2]-'0'), 3)) == n) {
-            return "Yes";
+            return "true";
         }
-        return "No";
+        return "false";
     }
 };
 ```
@@ -68,7 +68,7 @@ class Solution {
             sum += Math.pow(digit, 3);
             n /= 10;
         }
-        return sum == original ? "Yes" : "No";
+        return sum == original ? "true" : "false";
     }
 }
 ```
@@ -84,7 +84,7 @@ class Solution:
             digit = n % 10
             sum += digit ** 3
             n //= 10
-        return "Yes" if sum == original else "No"
+        return "true" if sum == original else "false"
 ```
 
 ## Contribution and Support
